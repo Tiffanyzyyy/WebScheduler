@@ -41,6 +41,15 @@ def get_terms():
     '''
     return get_data('/get_terms')
 
+def get_schools(term_code):
+    url = base_url + '/get_schools?term_code=' + term_code
+    return get_data(url)
+
+def get_subjects(term_code, school):
+    url = base_url + '/get_subjects?term_code='+ term_code + '&school=' + school
+    return get_data(url)
+
+
 '''
 You should add more functions below to get information from the API.
 
